@@ -1,0 +1,33 @@
+{
+  "slides":[
+    {"image":"Slide1.JPG", "type":"info"},
+    {"image":"Slide2.JPG", "type":"info"},
+    {"image":"Slide3.JPG", "type":"info", "points":20, "comment":"PADAWAN ROUND"},
+    {"image":"Slide4.JPG", "type":"question"},
+    {"image":"Slide5.JPG", "type":"answer"},
+    {"image":"Slide6.JPG", "type":"question"},
+    {"image":"Slide7.JPG", "type":"answer"},
+    {"image":"Slide8.JPG", "type":"question"},
+    {"image":"Slide9.JPG", "type":"answer"},
+    {"image":"Slide24.JPG", "type":"info"},
+    {"image":"Slide25.JPG", "type":"info", "points":40, "comment":"Jedi Round"},
+    {"image":"Slide10.JPG", "type":"question"},
+    {"image":"Slide11.JPG", "type":"answer"},
+    {"image":"Slide12.JPG", "type":"question"},
+    {"image":"Slide13.JPG", "type":"answer"},
+    {"image":"Slide14.JPG", "type":"question"},
+    {"image":"Slide15.JPG", "type":"answer"},
+    {"image":"Slide46.JPG", "type":"info"},
+    {"image":"Slide47.JPG", "type":"info", "points":60, "comment":"Jedi Master Round"},
+    {"image":"Slide16.JPG", "type":"question"},
+    {"image":"Slide17.JPG", "type":"answer"},
+    {"image":"Slide18.JPG", "type":"question"},
+    {"image":"Slide19.JPG", "type":"answer"},
+    {"image":"Slide20.JPG", "type":"question"},
+    {"image":"Slide21.JPG", "type":"answer"},
+    {"image":"Slide22.JPG", "type":"question"},
+    {"image":"Slide23.JPG", "type":"answer"},
+    {"image":"Slide68.JPG", "type":"info"},
+    {"image":"Slide69.JPG", "type":"info"}
+  ]
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.socket.io/4.5.0/socket.io.min.js"></script>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+<script type='text/javascript'>
+
+const socket = io();
+window.myViewId = "{{view_id}}";
+
+console.log("I Am View ID: " + window.myViewId);
+console.log("Testing caching 3")
+
+socket.on('connect', function() {
+        console.log("I'm connected before. Telling the server.")
+        socket.emit('new-device', {data: 'I\'m connected!', id:window.myViewId});
+        console.log("I'm connected after. I told the server.")
+    });
+
+$(document).ready(function(){
+    //connect to the socket server.
+    //var socket = io.connect();
+    var numbers_received = [];
+
+    socket.on('new-image', function(msg) {
+    //var my_image = msg.image + "-" + window.myViewId + ".jpeg";
+     console.log("Received new-image event");
+     //$("#slide").attr("src", my_image);
+
+     var background_element = document.getElementById("background-id");
+     var image_element = document.getElementById("image-id");
+
+     background_element.classList.add("flash-background");
+     image_element.classList.add("show-image");
+
+    });
+
+    //receive details from server
+
+});
+</script>
+
+<style>
+
+  /* Styling of the BACKGROUND div */
+  
+  .background-basics {
+    background-color: white;
+    height:100vh;
+    width:100vw;
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+  }
+  
+  @keyframes kf-flash-background {
+    0%   {background-color: white;}
+    100% {background-color: blue;}
+  }
+  
+  .flash-background {
+    background-color: white;
+    animation-name: kf-flash-background;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+  }
+  
+  
+  /* Styling of the IMAGE element */
+  
+  .image-basics {
+    opacity: 0;
+    max-height:100%;
+    width:100%;
+    max-width:100%
+  }
+  
+  @keyframes kf-show-image {
+    0%   {opacity:0;}
+    99% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  
+  .show-image {
+    animation-name: kf-show-image;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    }
+  
+  </style>
+
+</head>
+<body style="background-color:white">
+
+<div id="background-id" class="background-basics" >
+  <img id="image-id" class="image-basics" src="/static/images/IMAG-{{view_id}}.jpeg" />
+</div>
+
+</body>
+</html>
