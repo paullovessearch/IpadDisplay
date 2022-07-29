@@ -29,6 +29,8 @@ from threading import Thread, Event
 import os
 import sys
 
+print("Python Version: " + sys.version)
+
 #
 # Initialize Flask & Socket IO for push notifications to clients
 #

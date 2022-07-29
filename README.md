@@ -7,17 +7,19 @@ Installation steps:
 
 1. Install python 3.8 (other versions may work, this is the version I tested)
 
-1. pip3 installs:
+        pipenv --python 3.8
 
-        pip3 install flask<br/>
-        pip3 install flask-socketio
+1. Package installs:
+
+        pipenv install flask<br/>
+        pipenv install flask-socketio
 
 1. Run it:
 
         export FLASK_APP=ipad
-        flask run
+        pipenv run flask run
 
     * OR: (use with care)
 
-        flask run --host 0.0.0.0 --port 80
+        pipenv run flask run --host 0.0.0.0 --port 80
     
