@@ -11,7 +11,7 @@ Installation steps:
 
 1. Package installs:
 
-        pipenv install flask<br/>
+        pipenv install flask
         pipenv install flask-socketio
 
 1. Run it:
